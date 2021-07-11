@@ -26,6 +26,7 @@ public class BMI {
         System.out.print("======Kalkulator Kesehatan======\n");
         System.out.printf("BMI = %.1f (%s)%n", bmi, ket);
         System.out.printf("Berat Badan Ideal Kamu = %.0f %n", beratIdeal(jk,tb));
+        bar(bmi);
 
     }
 
@@ -42,6 +43,42 @@ public class BMI {
                 return tb-100-((tb-100)*0.15);
             default:
                 return 0;
+        }
+    }
+
+    private static void bar(double bmi) {
+        var idx = Math.round((bmi/38)*50-16);
+        for(var i = 1; i <= 50; i++) {
+            if (i == 1) {
+                System.out.print("|");
+                continue;
+            } else if (i == 25) {
+                System.out.print("|");
+                continue;
+            } else if (i == 50) {
+                System.out.print("|");
+                continue;
+            } else if (i == idx) {
+                System.out.print("||");
+                continue;
+            }
+            System.out.print("-");
+        }
+
+        System.out.println();
+
+        for(var i = 1; i <= 50; i++) {
+            if (i == 1) {
+                System.out.print(16);
+                continue;
+            } else if (i == 47) {
+                System.out.print(38);
+                continue;
+            } else if (i == idx) {
+                System.out.printf("%.1f", bmi);
+                continue;
+            }
+            System.out.print(" ");
         }
     }
 }
