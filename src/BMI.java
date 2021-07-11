@@ -44,4 +44,8 @@ public class BMI {
                 return 0;
         }
     }
+
+    private static void bar(double bmi) {
+
+    }
 }
