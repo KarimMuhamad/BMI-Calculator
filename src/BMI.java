@@ -8,7 +8,7 @@ public class BMI {
         int tb = inp.nextInt();
         System.out.print("Berat Badan : ");
         int bb = inp.nextInt();
-        System.out.print("Jenis Kelamin : ");
+        System.out.print("Jenis Kelamin (l/p): ");
         String jk = inp.next();
 
         var bmi = bmiCalculator(tb,bb);
@@ -23,7 +23,7 @@ public class BMI {
             ket = "UnderWeight";
         }
 
-        System.out.print("==================\n");
+        System.out.print("======Kalkulator Kesehatan======\n");
         System.out.printf("BMI = %.1f (%s)%n", bmi, ket);
         System.out.printf("Berat Badan Ideal Kamu = %.0f %n", beratIdeal(jk,tb));
 
